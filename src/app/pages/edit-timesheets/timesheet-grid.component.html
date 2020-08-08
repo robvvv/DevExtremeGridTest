@@ -1,0 +1,42 @@
+<h2 class="content-block">Time Sheets</h2>
+
+<dx-data-grid class="dx-card wide-card"
+[dataSource]="customDataSource">
+[showBorders]="false"
+    [focusedRowEnabled]="true"
+    [focusedRowIndex]="0"
+    [columnAutoWidth]="true"
+    [columnHidingEnabled]="true">
+
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+
+    <dxi-column
+        dataField="emplID"
+        [width]="90"
+        caption="Employee"
+        [hidingPriority]="2">
+    </dxi-column>
+    <dxi-column
+        dataField="projID"
+        [width]="190"
+        caption="Project"
+        [hidingPriority]="8">
+    </dxi-column>
+    <dxi-column
+        dataField="workDate"
+        caption="Work Date"
+        [hidingPriority]="6">
+    </dxi-column>
+    <dxi-column
+        dataField="nbrHrsReg"
+        caption="Reg Hrs"
+        [hidingPriority]="6">
+    </dxi-column>
+    <dxi-column
+        dataField="nbrHrsOT1"
+        caption="Overtime 1"
+        [hidingPriority]="6">
+    </dxi-column>
+</dx-data-grid>
